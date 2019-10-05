@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FakeData</title>
+</head>
+<body>
+	<h2>Employee Data</h2>
+	{% if e_data %}
+	<table border="2px solid black">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Address</th>
+				<th>Date of Birth</th>
+				<th>Salary</th>
+			</tr>
+		</thead>
+		{% for i in e_data %}
+		<tbody>
+			<tr>
+				<td>{{i.id}}</td>
+				<td>{{i.name}}</td>
+				<td>{{i.email}}</td>
+				<td>{{i.address}}</td>
+				<td>{{i.dob}}</td>
+				<td>{{i.salary}}</td>
+			</tr>
+		</tbody>
+		{% endfor %}
+	</table>
+	{% else %}
+	<h2>Data Not Available</h2>
+	{% endif %}
+</body>
+</html>
